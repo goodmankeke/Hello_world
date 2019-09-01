@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for category, msg in get_flashed_messages(with_categories=true) %}
+    <p>{{ category }}: {{ msg }}</p>
+    {% endfor %}
+    <img src="{{url_for('static', filename='test.jpg')}}">
+</body>
+</html>
